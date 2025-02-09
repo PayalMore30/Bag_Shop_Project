@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #fff;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a, .user-options a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-bar input {
+    padding: 8px;
+    width: 200px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 10px 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #0071e3;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+}
+
+/* Product Image */
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+
+.product-image img {
+    width: 70%;
+}
+
+.image-thumbnails {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 10px; */
+}
+
+.image-thumbnails img {
+    width: 80px;
+    cursor: pointer;
+}
+
+/* Product Info */
+.product-info {
+    flex: 1;
+}
+
+.product-info h1 {
+    font-size: 28px;
+}
+
+.rating {
+    color: green;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.red { background-color: #e63946; }
+.black { background-color: #222; }
+.green { background-color: #2a9d8f; }
+.white { background-color: #f1faee; }
+.blue { background-color: #457b9d; }
+
+/* Quantity */
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Buttons */
+.buy-now, .add-to-cart {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.buy-now {
+    background-color: #004225;
+    color: white;
+}
+
+.add-to-cart {
+    background-color: transparent;
+    border: 2px solid #004225;
+    color: #004225;
+}
+
+/* Delivery Info */
+.delivery-info {
+    margin-top: 20px;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.highlight {
+    color: red;
+}

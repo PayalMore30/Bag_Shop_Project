@@ -11,7 +11,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: cadetblue;
+    background-color:rosybrown ;
     padding: 15px 20px;
     border-bottom: 2px solid #ccc;
 }
@@ -196,3 +196,144 @@ img{
 .para{
     color: rgb(205, 201, 201);  
 }
+
+
+/* .first-category,
+.second-category,
+.third-category,
+.fourth-category,
+.fifth-category {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.first-category::before,
+.second-category::before,
+.third-category::before,
+.fourth-category::before,
+.fifth-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    animation: glossEffect 5s infinite linear;
+    pointer-events: none;
+}
+
+
+@keyframes glossEffect {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.first-category:hover,
+.second-category:hover,
+.third-category:hover,
+.fourth-category:hover,
+.fifth-category:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+} */
+
+/* Category Buttons */
+/* Category Buttons */
+.first-category,
+.second-category,
+.third-category,
+.fourth-category,
+.fifth-category {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add a glossy effect with a moving gradient overlay in a cross pattern */
+.first-category::before,
+.second-category::before,
+.third-category::before,
+.fourth-category::before,
+.fifth-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 70%) 0% 0%, linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 70%) 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: glossEffect 2s infinite linear;
+    pointer-events: none; /* Prevents the overlay from interfering with clicks */
+}
+
+/* Glossy animation */
+@keyframes glossEffect {
+    0% {
+        transform: translateX(-100%) ;
+    }
+    100% {
+        transform: translateX(100%) ;
+    }
+}
+
+/* Shiny effect when hovered */
+.first-category:hover,
+.second-category:hover,
+.third-category:hover,
+.fourth-category:hover,
+.fifth-category:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+#containerSlider
+        {
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+        #containerSlider img
+        {
+            width: 100%;
+            height: 140%;
+            text-align: center;
+            align-content: center;
+        }
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }

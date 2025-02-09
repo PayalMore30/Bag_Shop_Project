@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Shopcart</div>
+        <nav>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+            <a href="#">What's New</a>
+            <a href="#">Delivery</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Product">
+        </div>
+        <div class="user-options">
+            <a href="#">Account</a>
+            <a href="#">Cart</a>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="#">Electronics</a> / 
+        <a href="#">Audio</a> / 
+        <strong id="breadcrumb-name">Product Name</strong>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image">
+            <img id="main-image" src="" alt="Product Image">
+            <div class="image-thumbnails">
+                <img src="images/bag1.jpeg" alt="">
+                <img src="images/bag2.jpeg" alt="">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">Product Name</h1>
+            <p>A perfect balance of high-fidelity audio and premium experience.</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i> (121)
+            </p>
+            <p class="price" id="product-price">$0.00</p>
+
+            <h3>Choose a Color</h3>
+            <div class="color-options">
+                <span class="color red"></span>
+                <span class="color black"></span>
+                <span class="color green"></span>
+            </div>
+
+            <div class="quantity">
+                <button id="minus-btn">-</button>
+                <span id="quantity">1</span>
+                <button id="plus-btn">+</button>
+            </div>
+
+            <p class="stock">Only <span class="highlight">12 Items</span> Left! Don’t miss it</p>
+
+            <button class="buy-now">Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const productData = JSON.parse(localStorage.getItem('selectedProduct'));
+            if (productData) {
+                document.getElementById('product-name').textContent = productData.name;
+                document.getElementById('product-price').textContent = "₹ " + productData.price;
+                document.getElementById('main-image').src = productData.img;
+                document.getElementById('breadcrumb-name').textContent = productData.name;
+            }
+
+            document.getElementById("minus-btn").addEventListener("click", function () {
+                let quantity = parseInt(document.getElementById("quantity").textContent);
+                if (quantity > 1) {
+                    document.getElementById("quantity").textContent = --quantity;
+                }
+            });
+
+            document.getElementById("plus-btn").addEventListener("click", function () {
+                let quantity = parseInt(document.getElementById("quantity").textContent);
+                document.getElementById("quantity").textContent = ++quantity;
+            });
+
+            document.querySelector(".add-to-cart").addEventListener("click", function () {
+                alert(productData.name + " added to cart!");
+            });
+
+            document.querySelector(".buy-now").addEventListener("click", function () {
+                alert("Proceeding to checkout...");
+            });
+        });
+    </script>
+</body>
+</html>
